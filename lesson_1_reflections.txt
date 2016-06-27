@@ -1,0 +1,45 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+	Immedietly the line(s) that contain the differences are highlighted, making it
+		easy to spot where the files have changed and where an error might occur.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+    It is easy to make a small mistake that goes unoticed for a long time,
+    	and is only noticed after the file has been greatly altered.
+    		It can be useful to look back and see what worked in the past.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+    Manually committing in Git leads to more meaningful and logical save points,
+        rather than arbitrarily chosen versions saved as in Google docs.
+            However, automatic saving allows for safer version control as there
+                is no risk of losing work over negligence or unforseen consequences.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+    Git and Google Docs are used for different purposes. Git is largely used for code projects,
+        which very often involve many interconnected files. This makes tracking multiple files
+            simoultaniusly very useful. Gooogle docs, on the other hand, is used more often for
+                word documents or spreadsheets, which are more often than not stand-alone files.
+
+How can you use the commands git log and git diff to view the history of files?
+
+    git log lets you view all previous commits in the repository, listed from newest (at top)
+        to oldest (at bottom). Each commit has a description, some information, and a commit ID.
+        These IDs can be used to compare using git diff, which allows you to view which lines were
+            added or removed between two committs.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+    As long as you are making commits after signifigant changes, you will always be able to backtrack to a working version. This means that you can be more confident to make changes that could break things; even if things go wrong, you can just checkout to a working version and figure out where things went wrong!
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+    Once I have completed the Machine Learning and Android Udacity courses I want to try to create some sort of app to help me practice and apply my skills. I will use git to control different versions of the project, allowing me to experiment with various ideas in the code.
