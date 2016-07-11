@@ -16,14 +16,49 @@ What value do you think it offers?
 
 How can you use the staging area to make sure you have one commit per logical
 change?
+	
+	The staging area allows you to add only the files that were changed,
+	and more importantly only the changes you want to commit.
+	git diff and git diff --staged allow you to double check that
+	the changes you are about to commit are the changes you want.
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	Any time you want to take the project in a different logical direction;
+	such as making a different version of the game, or experimenting with
+	something you're not sure of, it makes sense to make a branch. This
+	will allow you to work on the new version, while keeping a clean
+	version in the master branch.
+
 How do the diagrams help you visualize the branch structure?
+
+	By making a diagram of all of your branches, specifically with 
+	arrows show the 'reachability' of each commit, it makes it
+	very clear how the git repository is laid out. In addition,
+	when making a new commit it makes it clear whether or not
+	it will be reachable, or if it will be lost, if you checkout
+	to a different commit.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
-What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
+	Merging two branches together combines all of the files in the following way:
+
+	-If parts of a file are the same in both branches, they are kept
+	-If parts were not present in the split file but are present in at least
+		one of the branches, those parts are kept
+	-If parts were present in the split file but are removed in at least one
+		of the branches, those parts are discarded
+	Merging is represented by drawing the two branches together, as they are now
+	a common branch.
+
+What are the pros and cons of Git's automatic merging vs. always doing merges
 manually?
+
+	Pros: 
+		-Automatic merging is obviously much faster than manual merging
+		-You don't have to look at each file version, git does it for you
+	Cons:
+		-You may accidentily keep or discard something you didn't want to
+		-Conflicts can arrise whereby you have to look into the code
